@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+    color: #fbf4f4;
+  }
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgba(205, 86, 78, 0.514);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(83, 26, 26, 0.616);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+   
+}
+
+#nav{
+    height: 150px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center; 
+    padding: 0 150px; 
+    gap: 45px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+}
+
+#nav{
+    height: 76px;
+}
+
+#nav h4{
+     text-transform: uppercase;
+     font-weight: 500;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(234, 192, 171, 0.53);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+   
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "MATCH. GROW. LOVE.";
+    position: absolute;
+    color:black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px rgb(243, 22, 6);
+    z-index: -1;
+
+}
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 65%;
+}
+
+#page1 #arrow {
+    height: 250px;
+    width: 250px;
+    background-color: transparent;
+    border: 2px solid #eb0707;
+    position: absolute;
+    display: flex;
+    left: -2%;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+  }
+  #page1 #arrow i {
+    font-size: 50px;
+    font-weight: 100;
+  }
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #d32a10;
+  }
+
+#page2 {
+   min-height: 200vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+#scroller h4{
+    display: inline-block;
+    font-size: 110px;
+    font-weight: 900;
+    color: transparent;
+    font-family: sans-serif;
+    margin-right: 10px;
+    transition: all linear 0.5;
+    -webkit-text-stroke: 2px rgba(237, 231, 231, 0.935);
+}
+
+#scroller h4:hover{
+    color: rgba(244, 236, 236, 0.936)
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+
+
+    }
+    
+}
+
+#about-us{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    z-index: 10;
+    /* padding: 0 50px; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about-us-in{
+    width: 50%;
+    text-align: center;
+
+}
+
+#about-us-in h3{
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    margin-top: 200px;
+}
+
+#about-us-in p{
+    font-size: 21px;
+    line-height: 38px;
+}
+
+#cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 88px;
+    margin-top: 205px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.card{
+
+    height: 80%;
+    width: 22%;
+    /* background-color: grey; */
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+
+#card1{
+    background-image: url(https://eu1.bumbcdn.com/ssc/static-eu.bumble.com/s4/files/e/2.1.mgfBZES6-elQXZ2rKcYFyTnZPbxm3DYDS3lvGYcIFQ41N5x7PPnLMTilmNByxHGa8gZPyFrBA2DIiloGmS0vHA/);
+}
+
+#card2{
+    background-image: url(https://eu1.bumbcdn.com/ssc/static-eu.bumble.com/s2/files/e/2.1.mgfBZES6-elQXZ2rKcYFyRxm9ORyv_DHxjqKaurwD_MJx8yO4E3hyz61yOtganrVd-U4dcA4txKmNjaWa6ajLg/);
+}
+
+#card3{
+    background-image: url(https://eu1.bumbcdn.com/ssc/static-eu.bumble.com/s3/files/e/2.1.mgfBZES6-elQXZ2rKcYFyW6LybJjnw44e7P6Ab0n2aVpsZW2VY_Z_hFTCAJAHfmWq8SrB7m7SYGkwYGvpf88sQ/);
+}
+
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(223, 72, 7);
+    padding: 30px;
+    padding-top: 80px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 25px;
+}
+
+.overlay p{
+    color: #000;
+    font-size: 16px;
+
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0,18deg);
+
+}
+
+#cardred{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom,rgb(255, 151, 5), rgb(255, 1, 69)); 
+}
+
+#cardred h4{
+    width: 45%;
+    line-height: 50px;
+    color: rgb(229, 224, 224);
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+#cardred img{
+    height: 100%;
+    object-fit: cover;
+    width: 13%;
+}
